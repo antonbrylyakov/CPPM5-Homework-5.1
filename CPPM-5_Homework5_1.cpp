@@ -19,30 +19,31 @@ public:
 		return _name;
 	} 
 protected:
-	Figure(unsigned int sideCount, std::string name)
+	Figure(unsigned int sideCount)
 	{
 		_sideCount = sideCount;
-		_name = name;
 	}
 
+	std::string _name;
 private:
 	unsigned int _sideCount;
-	std::string _name;
 };
 
 class Triangle : public Figure
 {
 public:
-	Triangle() : Figure(3, "Треугольник")
+	Triangle() : Figure(3)
 	{
+		_name = "Треугольник";
 	}
 };
 
 class Quadrangle : public Figure
 {
 public:
-	Quadrangle() : Figure(4, "Четырехугольник")
+	Quadrangle() : Figure(4)
 	{
+		_name = "Четырехугольник";
 	}
 };
 
